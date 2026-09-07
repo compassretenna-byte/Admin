@@ -1,0 +1,230 @@
+@import "tailwindcss";
+
+@layer theme {
+  :root {
+    --font-space-grotesk: 'Space Grotesk', sans-serif;
+    --font-jetbrains-mono: 'JetBrains Mono', monospace;
+    --font-geist: 'Geist', sans-serif;
+  }
+}
+
+/* Design System Utilities matching DAWG OS Design System */
+.bg-surface { background-color: #f9f9f9; }
+.bg-surface-container { background-color: #eeeeee; }
+.bg-surface-container-lowest { background-color: #ffffff; }
+.bg-surface-container-low { background-color: #f3f3f4; }
+.bg-surface-container-high { background-color: #e8e8e8; }
+.bg-surface-container-highest { background-color: #e2e2e2; }
+.bg-primary { background-color: #000000; }
+.bg-primary-container { background-color: #1b1b1b; }
+.bg-error { background-color: #ba1a1a; }
+.bg-error-container { background-color: #ffdad6; }
+
+.text-primary { color: #000000; }
+.text-on-primary { color: #ffffff; }
+.text-on-primary-container { color: #848484; }
+.text-on-surface { color: #1a1c1c; }
+.text-on-surface-variant { color: #4c4546; }
+.text-error { color: #ba1a1a; }
+.text-on-error { color: #ffffff; }
+
+.border-primary { border-color: #000000; }
+.border-outline { border-color: #7e7576; }
+.border-error { border-color: #ba1a1a; }
+
+/* Spacing tokens */
+.p-panel-pad { padding: 12px; }
+.px-panel-pad { padding-left: 12px; padding-right: 12px; }
+.py-panel-pad { padding-top: 12px; padding-bottom: 12px; }
+.p-gutter { padding: 16px; }
+.px-gutter { padding-left: 16px; padding-right: 16px; }
+.py-gutter { padding-top: 16px; padding-bottom: 16px; }
+
+.gap-unit-2xs { gap: 2px; }
+.gap-unit-xs { gap: 4px; }
+.gap-unit-sm { gap: 8px; }
+.gap-unit-md { gap: 12px; }
+.gap-unit-base { gap: 16px; }
+.gap-unit-lg { gap: 24px; }
+.gap-unit-xl { gap: 32px; }
+.gap-unit-2xl { gap: 48px; }
+
+.p-unit-2xs { padding: 2px; }
+.p-unit-xs { padding: 4px; }
+.p-unit-sm { padding: 8px; }
+.p-unit-md { padding: 12px; }
+.p-unit-base { padding: 16px; }
+.p-unit-lg { padding: 24px; }
+.p-unit-xl { padding: 32px; }
+
+.px-unit-2xs { padding-left: 2px; padding-right: 2px; }
+.px-unit-xs { padding-left: 4px; padding-right: 4px; }
+.px-unit-sm { padding-left: 8px; padding-right: 8px; }
+.px-unit-md { padding-left: 12px; padding-right: 12px; }
+.px-unit-base { padding-left: 16px; padding-right: 16px; }
+.px-unit-lg { padding-left: 24px; padding-right: 24px; }
+.px-unit-xl { padding-left: 32px; padding-right: 32px; }
+
+.py-unit-2xs { padding-top: 2px; padding-bottom: 2px; }
+.py-unit-xs { padding-top: 4px; padding-bottom: 4px; }
+.py-unit-sm { padding-top: 8px; padding-bottom: 8px; }
+.py-unit-md { padding-top: 12px; padding-bottom: 12px; }
+.py-unit-base { padding-top: 16px; padding-bottom: 16px; }
+.py-unit-lg { padding-top: 24px; padding-bottom: 24px; }
+
+.mb-unit-2xs { margin-bottom: 2px; }
+.mb-unit-xs { margin-bottom: 4px; }
+.mb-unit-sm { margin-bottom: 8px; }
+.mb-unit-base { margin-bottom: 16px; }
+.mt-unit-2xs { margin-top: 2px; }
+.mt-unit-xs { margin-top: 4px; }
+.mt-unit-sm { margin-top: 8px; }
+.mt-unit-md { margin-top: 12px; }
+.mt-unit-base { margin-top: 16px; }
+.mt-unit-lg { margin-top: 24px; }
+.mt-unit-xl { margin-top: 32px; }
+.my-unit-2xs { margin-top: 2px; margin-bottom: 2px; }
+.my-unit-xs { margin-top: 4px; margin-bottom: 4px; }
+.my-unit-sm { margin-top: 8px; margin-bottom: 8px; }
+.mx-unit-xs { margin-left: 4px; margin-right: 4px; }
+.mx-unit-sm { margin-left: 8px; margin-right: 8px; }
+.mx-unit-md { margin-left: 12px; margin-right: 12px; }
+.mx-unit-lg { margin-left: 24px; margin-right: 24px; }
+.pt-unit-2xs { padding-top: 2px; }
+.pt-unit-xs { padding-top: 4px; }
+.pt-unit-sm { padding-top: 8px; }
+.pt-unit-md { padding-top: 12px; }
+.pt-unit-base { padding-top: 16px; }
+.pt-unit-lg { padding-top: 24px; }
+.pb-unit-2xs { padding-bottom: 2px; }
+.pb-unit-xs { padding-bottom: 4px; }
+.pb-unit-sm { padding-bottom: 8px; }
+.pb-unit-md { padding-bottom: 12px; }
+.pb-unit-base { padding-bottom: 16px; }
+.pl-unit-xs { padding-left: 4px; }
+.pl-unit-sm { padding-left: 8px; }
+.pl-unit-md { padding-left: 12px; }
+.pl-unit-base { padding-left: 16px; }
+.pl-unit-lg { padding-left: 24px; }
+.pl-unit-xl { padding-left: 32px; }
+.pr-unit-xs { padding-right: 4px; }
+.pr-unit-sm { padding-right: 8px; }
+.pr-unit-md { padding-right: 12px; }
+.pr-unit-base { padding-right: 16px; }
+.pr-unit-lg { padding-right: 24px; }
+.pr-unit-xl { padding-right: 32px; }
+
+/* Font Tokens */
+.font-display { font-family: 'Space Grotesk', sans-serif; font-size: 48px; line-height: 52px; letter-spacing: -0.04em; font-weight: 700; }
+.font-headline-lg { font-family: 'Space Grotesk', sans-serif; font-size: 32px; line-height: 36px; letter-spacing: -0.03em; font-weight: 600; }
+.font-headline-md { font-family: 'Space Grotesk', sans-serif; font-size: 20px; line-height: 24px; letter-spacing: -0.02em; font-weight: 600; }
+.font-headline-sm { font-family: 'Space Grotesk', sans-serif; font-size: 16px; line-height: 20px; letter-spacing: -0.01em; font-weight: 600; }
+.font-meta-header { font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 14px; letter-spacing: 0.06em; font-weight: 600; }
+.font-meta-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; line-height: 12px; letter-spacing: 0.08em; font-weight: 500; }
+.font-tag-index { font-family: 'JetBrains Mono', monospace; font-size: 9px; line-height: 10px; letter-spacing: 0.1em; font-weight: 500; }
+.font-code-body { font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 16px; letter-spacing: 0em; font-weight: 400; }
+.font-body-lg { font-family: 'Geist', sans-serif; font-size: 15px; line-height: 22px; letter-spacing: -0.01em; font-weight: 400; }
+.font-body-md { font-family: 'Geist', sans-serif; font-size: 13px; line-height: 18px; letter-spacing: 0em; font-weight: 400; }
+.font-body-sm { font-family: 'Geist', sans-serif; font-size: 11px; line-height: 16px; letter-spacing: 0em; font-weight: 400; }
+
+/* Enforce absolute crisp square edges across all inputs, buttons, tables, containers globally */
+*,
+*::before,
+*::after {
+  border-radius: 0px !important;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #1a1c1c;
+  -webkit-font-smoothing: antialiased;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+/* Custom clean monochrome scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* FullCalendar styling with crisp black outlines while preserving status color codes */
+.fullcalendar-custom-wrapper .fc {
+  font-family: inherit;
+  --fc-border-color: #000000;
+  --fc-button-bg-color: #000000;
+  --fc-button-border-color: #000000;
+  --fc-button-hover-bg-color: #262626;
+  --fc-button-hover-border-color: #000000;
+  --fc-button-active-bg-color: #000000;
+  --fc-today-bg-color: #f3f4f6;
+  --fc-now-indicator-color: #000000;
+}
+
+.fullcalendar-custom-wrapper .fc .fc-toolbar-title {
+  font-size: 0.875rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.fullcalendar-custom-wrapper .fc .fc-button {
+  border-radius: 0px !important;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid #000000 !important;
+  box-shadow: none !important;
+}
+
+.fullcalendar-custom-wrapper .fc .fc-col-header-cell {
+  background-color: #ffffff;
+  padding: 8px 0;
+  font-size: 10px;
+  font-weight: 900;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-color: #000000;
+}
+
+.fullcalendar-custom-wrapper .fc .fc-timegrid-slot {
+  height: 2.25rem;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.fullcalendar-custom-wrapper .fc .fc-timegrid-slot-label-cushion {
+  font-size: 10px;
+  color: #4b5563;
+  font-family: ui-monospace, monospace;
+  font-weight: 700;
+}
+
+.fullcalendar-custom-wrapper .fc-event {
+  border-radius: 0px !important;
+  font-size: 11px;
+  padding: 2px 4px;
+  border: 1px solid #000000;
+}
+

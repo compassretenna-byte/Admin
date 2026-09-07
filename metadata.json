@@ -1,0 +1,7 @@
+{
+  "name": "All About Pawz OS",
+  "description": "Comprehensive pet grooming operations management, appointment scheduling, staff capacity, revenue analytics, and client records for All About Pawz.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
